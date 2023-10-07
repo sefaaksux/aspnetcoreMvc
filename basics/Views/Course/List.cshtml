@@ -1,0 +1,37 @@
+@model List<Course>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Course List</h2>
+
+    <!-- @foreach(var resim in Model){
+        <img src="~/img/@resim.image" alt="" width="200"> <br>
+    } -->
+
+     <!-- <img src="~/img/sefaResim.jpeg" alt="" width="200px">
+     <img src="~/img/computer.jpeg" alt="" width="200px">
+     <img src="~/img/sefa-logo.png" alt="" width="200px"> -->
+
+    @foreach(var kurs in Model){
+        <div id="Kurs_@kurs.id" style="display: flex; flex-direction: column; align-items: center;">
+            <h3>- @kurs.title -</h3> 
+            <p>@kurs.description</p>
+            <img src="~/img/@kurs.image" alt="">
+        </div>
+    }
+    <!-- @Model[0].title <br>
+    @Model[1].title <br>
+    @Model[2].title <br> -->
+</body>
+</html>
