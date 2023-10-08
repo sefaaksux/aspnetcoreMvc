@@ -11,6 +11,7 @@ public class CourseController : Controller
         kurs.id=1;
         kurs.title ="Asp.Net Core Kursu";
         kurs.description="Güzel ve eğlenceli bir kurstur !!";
+        kurs.image="computer.jpeg";
         return View(kurs);
     }
 
